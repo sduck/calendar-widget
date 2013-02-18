@@ -10,6 +10,10 @@ public interface ICalendarPreferences {
 	public static final String PREF_TEXT_SIZE = "textSize";
 	public static final String PREF_INDICATE_RECURRING = "indicateRecurring";
 	public static final String PREF_INDICATE_ALERTS = "indicateAlerts";
+	public static final String PREF_EVENTS_MULTIDAY = "eventsMultiDay";
+	public static final String PREF_EVENTS_MULTIDAY_ALL = "all";
+	public static final String PREF_EVENTS_MULTIDAY_ONLYFIRST = "onlyfirst";
+	public static final String PREF_EVENTS_MULTIDAY_ONLYFIRST_ALLDAY = "onlyfirst_allday";
 	public static final String PREF_BACKGROUND_TRANSPARENCY = "backgroundTransparency";
 	public static final int PREF_BACKGROUND_TRANSPARENCY_DEFAULT = 50;
 	public static final String PREF_DATE_FORMAT = "dateFormat";

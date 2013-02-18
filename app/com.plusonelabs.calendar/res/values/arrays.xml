@@ -21,5 +21,15 @@
         <item>24</item>
         <item>12</item>
     </string-array>
+    <string-array name="pref_event_multiday_entries">
+        <item>@string/appearance_multiday_all</item>
+        <item>@string/appearance_multiday_onlyfirst</item>
+        <item>@string/appearance_multiday_onlyfirst_allday</item>
+    </string-array>
+    <string-array name="pref_event_multiday_values" tools:ignore="MissingTranslation">
+        <item>all</item>
+        <item>onlyfirst</item>
+        <item>onlyfirst_allday</item>
+    </string-array>
 
 </resources>

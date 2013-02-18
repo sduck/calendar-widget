@@ -43,4 +43,15 @@
         </CheckBoxPreference>
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/appearance_events">
+        <ListPreference
+            android:defaultValue=""
+            android:entries="@array/pref_event_multiday_entries"
+            android:entryValues="@array/pref_event_multiday_values"
+            android:key="eventsMultiDay"
+            android:summary="%s"
+            android:title="@string/appearance_event_multiday_title">
+        </ListPreference>
+    </PreferenceCategory>
+
 </PreferenceScreen>

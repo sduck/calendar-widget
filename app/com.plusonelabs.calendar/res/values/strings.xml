@@ -5,7 +5,7 @@
     <string name="today">TODAY</string>
     <string name="tomorrow">TOMORROW</string>
     <string name="no_upcoming_events">No upcoming events</string>
-    <string name="widget_name">Calendar</string>
+    <string name="widget_name">Calendar - Dev</string>
     <string name="open_prefs_desc">Open the settings of the calendar widget</string>
     <string name="add_event_desc">Add new calender event</string>
     <string name="prefs_add_widget">Add Widget</string>
@@ -40,6 +40,12 @@
     <string name="appearance_indicate_recurring_title">Recurring events</string>
     <string name="appearance_background_transparency_title">Background transparency </string>
     <string name="appearance_background_transparency_desc">Adjust the transparency of the background</string>
+    <string name="appearance_events">Events</string>
+    <string name="appearance_event_multiday_desc">%s</string>
+    <string name="appearance_event_multiday_title">Multi-day events</string>
+    <string name="appearance_multiday_all">Show on all days</string>
+    <string name="appearance_multiday_onlyfirst">Show only on first day</string>
+    <string name="appearance_multiday_onlyfirst_allday">Show only on first day if event is an all day events</string>
 
     <!-- Preference feedback -->
     <string name="feedback_prefs">Feedback</string>

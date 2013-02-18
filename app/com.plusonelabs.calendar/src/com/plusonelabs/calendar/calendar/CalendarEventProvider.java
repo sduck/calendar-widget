@@ -1,6 +1,7 @@
 package com.plusonelabs.calendar.calendar;
 
 import static android.graphics.Color.*;
+import static com.plusonelabs.calendar.prefs.ICalendarPreferences.*;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -38,10 +39,13 @@ public class CalendarEventProvider {
 	private static final String AND_BRACKET = " AND (";
 
 	private final Context context;
+    private SharedPreferences prefs;
 
-	public CalendarEventProvider(Context context) {
+
+    public CalendarEventProvider(Context context) {
 		this.context = context;
-	}
+        prefs = PreferenceManager.getDefaultSharedPreferences(context);
+    }
 
 	public ArrayList<CalendarEvent> getEvents() {
 		Cursor cursor = createLoadedCursor();
@@ -80,7 +84,14 @@ public class CalendarEventProvider {
 	}
 
 	public void createFollowingEntries(ArrayList<CalendarEvent> eventList, CalendarEvent event) {
-		int daysCovered = event.daysSpanned();
+        String prefMultiDay = prefs.getString(PREF_EVENTS_MULTIDAY, PREF_EVENTS_MULTIDAY_ALL);
+        if (event.daysSpanned() > 1 && !event.isToday()) {
+            if ((prefMultiDay.equals(PREF_EVENTS_MULTIDAY_ONLYFIRST_ALLDAY) && event.isAllDay()) || prefMultiDay.equals(PREF_EVENTS_MULTIDAY_ONLYFIRST)) {
+                return;
+            }
+        }
+
+        int daysCovered = event.daysSpanned();
 		for (int j = 1; j < daysCovered; j++) {
 			DateTime startDate = event.getStartDate().toDateMidnight().plusDays(j).toDateTime();
 			if (isEqualOrAfterTodayAtMidnight(startDate)) {
